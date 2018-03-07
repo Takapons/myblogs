@@ -1,0 +1,441 @@
+/* Scss Document */
+/* Scss Document */
+/* --------------------------------
+ * variables
+ * -------------------------------- */
+/* --------------------------------
+ * category-deployment-components
+ * -------------------------------- */
+.category-contents {
+  background-color: #fff;
+  color: #333;
+  margin: auto;
+  text-align: left;
+  font-size: 2rem; }
+
+#sikaku p {
+  text-align: center; }
+
+.main-label {
+  display: block;
+  margin: 1.5px 0;
+  padding: 11px 12px;
+  color: #333;
+  font-weight: bold;
+  background: #a4cbf3;
+  cursor: pointer;
+  transition: all 0.3s; }
+  .main-label :hover {
+    background: #85baef; }
+
+.cssacc {
+  display: none; }
+
+.accshow {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: .3s; }
+
+.cssacc:checked + .accshow {
+  height: auto;
+  padding: 5px 5px 5px 10px;
+  opacity: 1; }
+
+.acc-contents {
+  display: block;
+  margin: 1.5px 0;
+  padding: 11px 12px;
+  color: #333;
+  font-weight: bold;
+  border: 1px solid #95989A;
+  border-radius: 1px;
+  cursor: pointer;
+  transition: all 0.5s; }
+
+/* --------------------------------
+ * offer-closing
+ * -------------------------------- */
+.offer {
+  max-width: 360px;
+  margin: 40px auto;
+  border-radius: 5px;
+  text-align: center;
+  letter-spacing: 1rem;
+  padding: 1rem;
+  border: 1px solid #95989A;
+  cursor: pointer; }
+
+/* --------------------------------
+ * user-rating
+ * -------------------------------- */
+.userrating {
+  max-width: 50rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem auto;
+  line-height: 3rem;
+  vertical-align: center; }
+  .userrating .result-rating {
+    position: relative;
+    font-size: 2.5rem;
+    letter-spacing: .8rem; }
+    .userrating .result-rating .result-rating-forward {
+      position: absolute;
+      width: 86%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      color: #F7D94C; }
+    .userrating .result-rating .result-rating-back {
+      color: #ccc; }
+
+.reviewoffer-text {
+  max-width: auto;
+  margin: 2rem auto;
+  text-align: center;
+  line-height: 3rem;
+  vertical-align: middle; }
+
+/* Scss Document */
+/* --------------------------------
+ * variables
+ * -------------------------------- */
+/* --------------------------------
+ * review-deployment-components
+ * -------------------------------- */
+#review-form {
+  position: relative;
+  margin: auto;
+  padding: 1.2rem 2rem;
+  max-width: 85%;
+  text-align: center;
+  font-size: 2rem; }
+  #review-form .review-decompressor {
+    display: inline-block;
+    color: #fff;
+    background-color: #CB1B45;
+    padding: .6rem 3rem;
+    border-radius: .5rem;
+    margin-left: 10px; }
+  #review-form #opener {
+    display: none; }
+  #review-form #form-main {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .3s; }
+  #review-form .review-acc:checked + #form-main {
+    height: auto;
+    opacity: 1; }
+  #review-form fieldset {
+    margin: 2.5rem;
+    text-align: left; }
+  #review-form input {
+    padding: 1rem;
+    border: none;
+    display: inline-flex;
+    width: 100%;
+    height: 3rem; }
+  #review-form textarea {
+    min-height: calc(100% - 2rem);
+    border: none;
+    height: 300px;
+    width: 100%;
+    font-size: 1.6rem; }
+  #review-form button {
+    width: 60%;
+    border: none;
+    background-color: #CB1B45;
+    color: #FFF;
+    border-radius: 5px; }
+
+/* --------------------------------
+ * variables
+ * -------------------------------- */
+/* --------------------------------
+ * base style
+ * -------------------------------- */
+html {
+  font-size: 62.5%;
+  height: 100%; }
+
+* {
+  box-sizing: border-box; }
+  *::before, *::after {
+    box-sizing: border-box; }
+
+body {
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+main {
+  flex: 1; }
+
+/* --------------------------------
+ * basic style
+ * -------------------------------- */
+.heading {
+  color: #CB1B45;
+  position: relative;
+  display: inline-block;
+  margin: 20px 0 10;
+  padding-bottom: 4px;
+  letter-spacing: 2px;
+  font-size: 2rem; }
+  .heading::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+
+/* --------------------------------
+ * header
+ * -------------------------------- */
+.header {
+  padding: 10px 30px 30px;
+  background: rgba(255, 255, 255, 0.85); }
+
+.site-title {
+  background: url(../images/logo.svg) no-repeat;
+  font-size: 3rem;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  position: relative; }
+  .site-title:before {
+    position: absolute;
+    width: 100vw;
+    background-color: #CB1B45; }
+
+.site-description {
+  margin-bottom: 10px;
+  color: #888;
+  font-size: 1.6rem; }
+
+/* --free search style-- */
+.mainsearch {
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+  padding: 5px auto 5px; }
+
+.searchsquare {
+  color: #333;
+  display: inline-block;
+  width: 400px;
+  height: 30px;
+  padding: 2px 2px 2px 20px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #CCD1D5;
+  fonz-size: 1.3rem; }
+
+.searchbutton {
+  display: inline-block;
+  color: #fff;
+  height: 30px;
+  width: 50px;
+  background-color: #CB1B45;
+  padding: 1px 1px 1px 1px;
+  border: 1px;
+  border-radius: 0 5px 5px 0; }
+
+/* --------------------------------
+ * skills
+ * -------------------------------- */
+.skills {
+  padding: 5px 0;
+  background-color: #fff;
+  color: #333; }
+
+.skills-wrapper {
+  display: table;
+  width: 80%;
+  margin: 10px auto 0;
+  table-layout: fixed; }
+
+.skill-box {
+  display: table-cell; }
+  .skill-box:hover {
+    background-color: #CB1B45;
+    border-radius: 12px;
+    opacity: 0.55;
+    border: 1px solid #333; }
+
+.material-icons {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  color: #000000;
+  line-height: 142px; }
+
+.skill-title {
+  margin: 0 20px 20px;
+  font-size: 4rem; }
+
+.skill-text {
+  margin: 0 20px;
+  line-height: 2; }
+
+/* --------------------------------
+ * news
+ * -------------------------------- */
+.news {
+  background-color: #fff;
+  width: inherit; }
+
+.newslists {
+  position: relative;
+  list-style-type: none;
+  max-height: 180px;
+  overflow-y: auto;
+  margin: 10px auto 90px;
+  width: 90%;
+  border-top: 1px solid #999; }
+  .newslists .newslist {
+    width: inherit; }
+  .newslists .topic {
+    color: #333;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 0; }
+  .newslists .date {
+    display: inline-block;
+    width: 20%;
+    font-size: 1rem;
+    letter-spacing: 1px; }
+  .newslists .category {
+    display: inline-block;
+    width: 13%;
+    font-size: 1rem; }
+  .newslists .tips {
+    display: inline-block;
+    width: 47%;
+    padding-left: 25px;
+    font-size: 1.2rem;
+    text-align: left; }
+
+/* -- news category styles--*/
+.news_tips {
+  background-color: #CB1B45;
+  border-radius: 2px;
+  color: #fff; }
+
+.reviews_tips {
+  background-color: #0089A7;
+  border-radius: 2px;
+  color: #fff; }
+
+.recommends_tips {
+  background-color: #096148;
+  border-radius: 2px;
+  color: #fff; }
+
+/* --------------------------------
+ * footer
+ * -------------------------------- */
+.footer {
+  padding: 12px 30px 30px;
+  font-size: 1.3rem;
+  border-top: 8px solid #959A9A;
+  background-color: #CB1B45; }
+
+.footernavi {
+  margin: 5px 5px 5px; }
+  .footernavi a {
+    color: #fff; }
+
+.copyright {
+  white-space: pre-wrap; }
+
+/* --------------------------------
+ * smart phone
+ * -------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    background-image: none; } }
+@media (max-width: 768px) {
+  body {
+    font-size: 1.3rem; }
+
+  .heading {
+    margin-top: 20px;
+    font-size: 2.5rem; }
+
+  .button:hover {
+    opacity: 1; }
+
+  /* --- header --- */
+  .header {
+    padding-top: 60px; }
+
+  .site-title-sub {
+    font-size: 1.7rem; }
+    .site-title-sub::before, .site-title-sub::after {
+      display: block;
+      width: 80%;
+      margin: 10px auto; }
+
+  .site-title {
+    margin-top: 35px;
+    font-size: 5rem; }
+
+  /* --- about --- */
+  .about-text {
+    line-height: 1.8; }
+
+  /* --- works --- */
+  .works-wrapper, .work-box {
+    display: block; }
+
+  .work-image {
+    display: none; }
+
+  .work-description {
+    position: relative; }
+
+  .work-box::after {
+    top: 0;
+    height: 100%;
+    background-size: cover;
+    transform: none; }
+
+  /* --- skills --- */
+  .skills-wrapper {
+    display: block; }
+
+  .skill-box {
+    display: block;
+    margin: 40px auto; }
+
+  .skill-icon {
+    width: 100px;
+    height: 100px;
+    font-size: 5rem;
+    line-height: 92px; }
+
+  .skill-text {
+    margin: 0; }
+
+  /* --- contact --- */
+  .contact {
+    padding-bottom: 80px; }
+
+  .contact-form {
+    width: 80%; } }
+
+/*# sourceMappingURL=style.css.map */
