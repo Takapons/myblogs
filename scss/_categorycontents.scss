@@ -1,0 +1,137 @@
+/* Scss Document */
+
+
+/* --------------------------------
+ * variables
+ * -------------------------------- */
+$color-dominant: #CB1B45;
+$color-sub-blue: #0089A7;
+$color-sub-green: #096148;
+$color-sub-yellow: #F7D94C;
+$color-border: #95989A;
+
+
+$imgs-path-logo: '../images/logo.svg';
+$imgs-path-bg: '../images/bgimage.jpg';
+$imgs-arrow: '../images/arrow.svg';
+
+
+
+/* --------------------------------
+ * category-deployment-components
+ * -------------------------------- */
+
+.category-contents {
+	background-color: #fff;
+	color: #333;
+	margin: auto;
+	text-align: left;
+	font-size: 2rem;
+}
+
+#sikaku p{
+	text-align: center;
+}
+
+.main-label {
+	display: block;
+	margin: 1.5px 0;
+	padding: 11px 12px;
+	color: #333;
+	font-weight: bold;
+	background: #a4cbf3;
+	cursor: pointer;
+	transition: all 0.3s;
+
+	& :hover {
+		background: #85baef;
+	}
+}
+
+.cssacc {
+	display: none;
+}
+
+.accshow {
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: .3s;
+}
+
+.cssacc:checked + .accshow {
+	height: auto;
+	padding: 5px 5px 5px 10px;
+	opacity: 1;
+}
+
+
+
+.acc-contents {
+		display: block;
+		margin: 1.5px 0;
+		padding: 11px 12px;
+		color: #333;
+		font-weight: bold;
+		border: 1px solid $color-border;
+		border-radius: 1px;
+		cursor: pointer;
+		transition: all 0.5s;
+}
+
+/* --------------------------------
+ * offer-closing
+ * -------------------------------- */
+
+
+.offer {
+	max-width: 360px;
+	margin: 40px auto;
+	border-radius: 5px;
+	text-align: center;
+	letter-spacing: 1rem;
+	padding: 1rem;
+	border: 1px solid $color-border;
+	cursor: pointer;
+}
+
+
+/* --------------------------------
+ * user-rating
+ * -------------------------------- */
+
+.userrating {
+	max-width: 50rem;
+	display: flex;
+	justify-content: space-between;
+	margin: 2rem auto;
+	line-height: 3rem;
+	vertical-align: center;
+
+	& .result-rating {
+		position: relative;
+		font-size: 2.5rem;
+		letter-spacing: .8rem;
+
+		& .result-rating-forward {
+			position: absolute;
+			width: 86%;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			color: $color-sub-yellow;
+		}
+		& .result-rating-back {
+			color: #ccc;
+		}
+	}
+}
+
+.reviewoffer-text {
+	max-width: auto;
+	margin: 2rem auto;
+	text-align: center;
+	line-height: 3rem;
+	vertical-align: middle;
+}
