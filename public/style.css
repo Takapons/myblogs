@@ -167,9 +167,11 @@ html {
   *::before, *::after {
     box-sizing: border-box; }
 
+li {
+  list-style-type: none; }
+
 body {
   height: 100%;
-  color: #fff;
   text-align: center;
   font-size: 1.4rem;
   font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
@@ -181,8 +183,14 @@ a {
   text-decoration: none;
   color: #333; }
 
+h1 {
+  color: #CB1B45; }
+
 main {
   flex: 1; }
+
+.toptitle {
+  letter-space: 1em; }
 
 /* --------------------------------
  * basic style

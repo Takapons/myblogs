@@ -1,20 +1,22 @@
 {{ partial "header.html" . }}
     <article>
       <ul>
-        <li><a href="#"><span>2018/03/10</span> 記事タイトル10</a></li>
-        <li><a href="#"><span>2018/03/09</span> 記事タイトル9</a></li>
-        <li><a href="#"><span>2018/03/08</span> 記事タイトル8</a></li>
-        <li><a href="#"><span>2018/03/07</span> 記事タイトル7</a></li>
-        <li><a href="#"><span>2018/03/06</span> 記事タイトル6</a></li>
-        <li><a href="#"><span>2018/03/05</span> 記事タイトル5</a></li>
-        <li><a href="#"><span>2018/03/04</span> 記事タイトル4</a></li>
-        <li><a href="#"><span>2018/03/03</span> 記事タイトル3</a></li>
-        <li><a href="#"><span>2018/03/02</span> 記事タイトル2</a></li>
-        <li><a href="#"><span>2018/03/01</span> 記事タイトル1</a></li>
+        {{ $paginator := .Paginate (where .Data.Pages "Type" "posts") 20 }}
+        {{ range $paginator.Pages }}
+          {{ .Render "list" }}
+        {{ end }}
       </ul>
     </article>
-    <nav>
-      <a href="#">前へ</a>
-      <a href="#">次へ</a>
+
+    {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+    <nav class="pagination">
+      {{ if .Pagenator.HasPrev }}
+      <a href="{{ .Pagenator.Prev.URL }}">前へ</a>
+      {{ end }}
+      <span class="current-page">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
+      {{ if .Paginator.HasNext }}
+      <a href="{{ .Pagenator.Next.URL }}">次へ</a>
+      {{ end }}
     </nav>
+    {{ end }}
 {{ partial "footer.html" . }}

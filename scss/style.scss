@@ -17,10 +17,6 @@ $color-sub-yellow: #F7D94C;
 $color-border: #95989A;
 $color-border-vague: #CCD1D5;
 
-$imgs-path-logo: '../images/logo.svg';
-$imgs-path-bg: '../images/bgimage.jpg';
-$imgs-arrow: '../images/arrow.svg';
-
 
 /* --------------------------------
  * base style
@@ -38,10 +34,12 @@ html {
   }
 }
 
+li {
+  list-style-type: none;
+}
 
 body {
   height: 100%;
-  color: #fff;
   text-align: center;
   font-size: 1.4rem;
   font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
@@ -51,19 +49,29 @@ body {
 }
 
 a {
-	text-decoration: none;
-	color: #333;
+  text-decoration: none;
+  color: #333;
+}
+
+h1 { 
+  color: #CB1B45;
 }
 
 main {
   flex: 1;
 }
+
+.toptitle {
+  letter-space: 1em;
+}
+
+
 /* --------------------------------
  * basic style
  * -------------------------------- */
 
 .heading {
-	color: $color-dominant;
+  color: $color-dominant;
   position: relative;
   display: inline-block;
   margin: 20px 0 10;
